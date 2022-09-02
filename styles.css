@@ -16,7 +16,8 @@ body {
 
 .content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #newBookButton {
@@ -30,4 +31,10 @@ body {
 #newBookButton:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
+}
+
+.library {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
 }
