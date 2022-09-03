@@ -89,6 +89,7 @@ input[type="text"] {
     width: 300px;
     margin-bottom: 20px;
     padding: 10px;
+    outline: none;
 }
 
 input[type="checkbox"] {
