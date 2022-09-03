@@ -53,15 +53,12 @@ body {
 
 .overlay {
     position: fixed;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
-    cursor: pointer;
     display: none;
     justify-content: center;
     align-items: center;
@@ -117,4 +114,11 @@ form button {
 form>div:nth-child(6) {
     text-align: center;
     margin-top: 15px;
+}
+
+.close-button {
+    height: 30px;
+    position: relative;
+    bottom: 200px;
+    left: 340px;
 }
