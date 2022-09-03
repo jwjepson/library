@@ -69,10 +69,12 @@ submitButton.addEventListener("click", () => {
     else {
         read = "not read";
     }
-    addBookToLibrary(title, author, pages, read);
-    overlay.style.display = "none";
-    displayBooks();
-    form.reset();
+    if (validateInput(title, author, pages) == true) {
+        addBookToLibrary(title, author, pages, read);
+        overlay.style.display = "none";
+        displayBooks();
+        form.reset();
+    }
 });
 
 newBookButton = document.querySelector("#newBookButton");
@@ -104,4 +106,11 @@ function isRead() {
         myLibrary[bookIndex].read = "not read";
         this.textContent = "not read";
     }
+}
+
+function validateInput(title, author, pages) {
+    if (!title || !author || !pages) {
+        return false;
+    }
+    return true;
 }
