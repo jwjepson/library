@@ -44,6 +44,7 @@ function displayBooks() {
         const read = document.createElement("button");
         read.classList.add("readButton");
         read.textContent = book.read;
+        read.addEventListener("click", isRead);
         card.appendChild(read);
 
         library.appendChild(card);
@@ -91,4 +92,16 @@ closeButton.addEventListener("click", () => {
 function deleteBook() {
     myLibrary.splice(this.parentElement.getAttribute("data-index"), 1);
     displayBooks();
+}
+
+function isRead() {
+    let bookIndex = this.parentElement.getAttribute("data-index");
+    if (myLibrary[bookIndex].read == "not read") {
+        myLibrary[bookIndex].read = "read";
+        this.textContent = "read";
+    }
+    else {
+        myLibrary[bookIndex].read = "not read";
+        this.textContent = "not read";
+    }
 }
