@@ -14,12 +14,14 @@ function addBookToLibrary(title, author, pages, read) {
 function displayBooks() {
     const library = document.querySelector(".library");
     library.innerHTML = "";
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book, index) => {
         const card = document.createElement("div");
         card.classList.add("card");
+        card.dataset.index = index;
 
         const deleteButton = document.createElement("img");
         deleteButton.classList.add("deleteButton");
+        deleteButton.addEventListener("click", deleteBook);
         deleteButton.src = "icons/close-button.svg";
         card.appendChild(deleteButton);
 
@@ -78,3 +80,8 @@ closeButton.addEventListener("click", () => {
     overlay.style.display = "none";
     form.reset();
 });
+
+function deleteBook() {
+    myLibrary.splice(this.parentElement.getAttribute("data-index"), 1);
+    displayBooks();
+}
