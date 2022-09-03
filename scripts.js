@@ -57,6 +57,7 @@ submitButton.addEventListener("click", () => {
     addBookToLibrary(title, author, pages, read);
     overlay.style.display = "none";
     displayBooks();
+    form.reset();
 });
 
 newBookButton = document.querySelector("#newBookButton");
