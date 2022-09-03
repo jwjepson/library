@@ -122,7 +122,7 @@ body {
     margin-top: -10px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"] {
     border-radius: 8px;
     border: none;
     font-size: 20px;
