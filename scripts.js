@@ -16,22 +16,15 @@ submitButton.addEventListener("click", () => {
     const title = document.querySelector("#title").value; 
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
-    const read = document.querySelector("#read-it")
+    const read = document.querySelector("#read-it").checked;
     console.log(title, author, pages, read);
     addBookToLibrary(title, author, pages, read);
 });
 
-function resetForm() {
-    title.value = "";
-    author.value = "";
-    pages.value = "";
-    read = false;
-
-}
-
 newBookButton = document.querySelector("#newBookButton");
 overlay = document.querySelector(".overlay");
 closeButton = document.querySelector(".close-button");
+form = document.querySelector("form");
 
 newBookButton.addEventListener("click", () => {
     overlay.style.display = "flex";
@@ -39,5 +32,5 @@ newBookButton.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
     overlay.style.display = "none";
-    resetForm();
+    form.reset();
 });
