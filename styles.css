@@ -168,3 +168,11 @@ form>div:nth-child(6) {
     align-self: end;
     padding: 9px;
 }
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 25px;
+}
