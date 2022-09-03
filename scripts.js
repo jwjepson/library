@@ -13,6 +13,7 @@ function addBookToLibrary(title, author, pages, read) {
 
 function displayBooks() {
     const library = document.querySelector(".library");
+    const emptyLibrary = document.querySelector(".empty");
     library.innerHTML = "";
     myLibrary.forEach((book, index) => {
         const card = document.createElement("div");
@@ -47,6 +48,12 @@ function displayBooks() {
 
         library.appendChild(card);
     });
+    if (myLibrary.length > 0) {
+        emptyLibrary.style.display = "none";
+    }
+    else {
+        emptyLibrary.style.display = "flex";
+    }
 };
 
 const submitButton = document.querySelector("#submit");
