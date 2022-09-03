@@ -18,6 +18,11 @@ function displayBooks() {
         const card = document.createElement("div");
         card.classList.add("card");
 
+        const deleteButton = document.createElement("img");
+        deleteButton.classList.add("deleteButton");
+        deleteButton.src = "icons/close-button.svg";
+        card.appendChild(deleteButton);
+
         const title = document.createElement("div");
         title.classList.add("title");
         title.textContent = book.title;
