@@ -49,6 +49,30 @@ body {
     border-radius: 1rem;
     border-left: 4px solid #1992d4;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pages {
+    font-style: italic;
+}
+
+.readButton {
+    font-size: 20px;
+    width: 100px;
+    padding: 5px;
+    background-color: #90EE90;
+    border: none;
+    border-radius: 1rem;
+    color: white;
 }
 
 .overlay {
