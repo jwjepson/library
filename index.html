@@ -15,20 +15,20 @@
             <form>
                 <h3>Add Book</h3>
                 <div>
-                    <input type="text" autocomplete="off" name="title" placeholder="Title" id="title">
+                    <input type="text" autocomplete="off" name="title" placeholder="Title" id="title" required>
                 </div>
                 <div>
-                    <input type="text" autocomplete="off" name="author" placeholder="Author" id="author">
+                    <input type="text" autocomplete="off" name="author" placeholder="Author" id="author" required>
                 </div>
                 <div>
-                    <input type="text" autocomplete="off" name="pages" placeholder="Pages" id="pages">
+                    <input type="text" autocomplete="off" name="pages" placeholder="Pages" id="pages" required>
                 </div>
                 <div class="readit">
                     <p>Have you read it?</p>
                     <input type="checkbox" name="read-it" id="read-it" value="yes">
                 </div>
                 <div>
-                    <button type="button" id="submit" name="submit">Add</button>
+                    <button type="submit" id="submit" name="submit">Add</button>
                 </div>
             </form>
         </div>
