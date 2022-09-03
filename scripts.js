@@ -7,9 +7,19 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-function addBookToLibrary(title, author, pages) {
-    myLibrary.push(new Book(title, author, pages));
+function addBookToLibrary(title, author, pages, read) {
+    myLibrary.push(new Book(title, author, pages, read));
 }
+
+function displayBooks() {
+    const library = document.querySelector(".library");
+    library.innerHTML = "";
+    myLibrary.forEach((book) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        library.appendChild(card);
+    });
+};
 
 const submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", () => {
@@ -17,8 +27,9 @@ submitButton.addEventListener("click", () => {
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
     const read = document.querySelector("#read-it").checked;
-    console.log(title, author, pages, read);
     addBookToLibrary(title, author, pages, read);
+    overlay.style.display = "none";
+    displayBooks();
 });
 
 newBookButton = document.querySelector("#newBookButton");
